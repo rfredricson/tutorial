@@ -1,8 +1,6 @@
 ---
 
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Home Page";
 ---
@@ -17,9 +15,8 @@ const pageTitle = "Home Page";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		
-		<Navigation />
-
-		<h1>{pageTitle}</h1>
+		<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
 	</body>
 </html>
